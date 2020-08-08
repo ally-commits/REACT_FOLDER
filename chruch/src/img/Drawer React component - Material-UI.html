@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://material-ui.com/demos/drawers/ -->
+<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title class="next-head">Drawer React component - Material-UI</title><meta name="description" content="Navigation drawers provide access to destinations in your app. Side sheets are surfaces containing supplementary content that are anchored to the left or right edge of the screen." class="next-head"><meta name="twitter:card" content="summary_large_image" class="next-head"><meta name="twitter:site" content="@MaterialUI" class="next-head"><meta name="twitter:title" content="Drawer React component - Material-UI" class="next-head"><meta name="twitter:description" content="Navigation drawers provide access to destinations in your app. Side sheets are surfaces containing supplementary content that are anchored to the left or right edge of the screen." class="next-head"><meta name="twitter:image" content="https://material-ui.com/static/brand.png" class="next-head"><meta property="og:type" content="website" class="next-head"><meta property="og:title" content="Drawer React component - Material-UI" class="next-head"><meta property="og:url" content="https://material-ui.com/demos/drawers/" class="next-head"><meta property="og:description" content="Navigation drawers provide access to destinations in your app. Side sheets are surfaces containing supplementary content that are anchored to the left or right edge of the screen." class="next-head"><meta property="og:image" content="https://material-ui.com/static/brand.png" class="next-head"><meta property="og:ttl" content="604800" class="next-head"><link rel="preload" href="./Drawer React component - Material-UI_files/drawers.js.download" as="script"><link rel="preload" href="./Drawer React component - Material-UI_files/_app.js.download" as="script"><link rel="preload" href="./Drawer React component - Material-UI_files/_error.js.download" as="script"><link rel="preload" href="./Drawer React component - Material-UI_files/webpack-42652fa8b82c329c0559.js.download" as="script"><link rel="preload" href="./Drawer React component - Material-UI_files/commons.d3d8175a6402652f2532.js.download" as="script"><link rel="preload" href="./Drawer React component - Material-UI_files/main-e0157bddb706c19475c4.js.download" as="script"><meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"><link rel="manifest" href="https://material-ui.com/static/manifest.json"><meta name="theme-color" content="#2196f3"><link rel="shortcut icon" href="https://material-ui.com/static/favicon.ico"><link rel="canonical" href="https://material-ui.com/demos/drawers/"><link rel="stylesheet" href="./Drawer React component - Material-UI_files/css"><link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin="anonymous"><link rel="stylesheet" href="./Drawer React component - Material-UI_files/icon" media="all"><link rel="stylesheet" href="./Drawer React component - Material-UI_files/docsearch.min.css" media="all"><style id="insertion-point-jss"></style><!--insertion-point-jss--><style data-jss="">
+.j1c2w4bd {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.j1c2w4bd .anchor-link {
+  position: absolute;
+  margin-top: -96px;
+}
+.j1c2w4bd pre, .j1c2w4bd pre[class*="language-"] {
+  margin: 24px 0;
+  padding: 12px 18px;
+  overflow: auto;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+.j1c2w4bd code {
+  color: rgba(0, 0, 0, 0.87);
+  display: inline-block;
+  padding: 3px 6px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: #fff;
+}
+.j1c2w4bd p code, .j1c2w4bd ul code, .j1c2w4bd pre code {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.j1c2w4bd h1 {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 32px 0 16px;
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.00833em;
+}
+.j1c2w4bd .description {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0 0 40px;
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
+.j1c2w4bd h2 {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 32px 0 24px;
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.00735em;
+}
+.j1c2w4bd h3 {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 32px 0 24px;
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
+.j1c2w4bd h4 {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 24px 0 16px;
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.j1c2w4bd h5 {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 24px 0 16px;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.j1c2w4bd p, .j1c2w4bd ul, .j1c2w4bd ol {
+  line-height: 1.6;
+}
+.j1c2w4bd table {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  overflow-x: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  -webkit-overflow-scrolling: touch;
+}
+.j1c2w4bd thead {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  font-weight: 500;
+}
+.j1c2w4bd tbody {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.j1c2w4bd td {
+  padding: 8px 16px 8px 8px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.j1c2w4bd td:last-child {
+  padding-right: 24px;
+}
+.j1c2w4bd td compact {
+  padding-right: 24px;
+}
+.j1c2w4bd td code {
+  font-size: 13px;
+  line-height: 1.6;
+}
+.j1c2w4bd th {
+  padding: 0 16px 0 8px;
+  text-align: left;
+  white-space: pre;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.j1c2w4bd th:last-child {
+  padding-right: 24px;
+}
+.j1c2w4bd tr {
+  height: 48px;
+}
+.j1c2w4bd thead tr {
+  height: 64px;
+}
+.j1c2w4bd strong {
+  font-weight: 500;
+}
+.j1c2w4bd blockquote {
+  margin: 24px 0;
+  padding: 4px 24px;
+  border-left: 5px solid rgba(0, 0, 0, 0.38);
+  background-color: #fff;
+}
+.j1c2w4bd a, .j1c2w4bd a code {
+  color: rgb(225, 0, 80);
+  text-decoration: none;
+}
+.j1c2w4bd img {
+  max-width: 100%;
+}
+.j1c2w4bd a:hover, .j1c2w4bd a code:hover {
+  text-decoration: underline;
+}
+.j1c2w4bd table .prop-name {
+  font-size: 13px;
+  font-family: Consolas, "Liberation Mono", Menlo, monospace;
+}
+.j1c2w4bd table .required {
+  color: #006500;
+}
+.j1c2w4bd table .prop-type {
+  color: #932981;
+  font-size: 13px;
+  font-family: Consolas, "Liberation Mono", Menlo, monospace;
+}
+.j1c2w4bd table .prop-default {
+  font-size: 13px;
+  font-family: Consolas, "Liberation Mono", Menlo, monospace;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.38);
+}
+.j1c2w4bd h1 code, .j1c2w4bd h2 code, .j1c2w4bd h3 code, .j1c2w4bd h4 code {
+  font-size: inherit;
+  word-break: break-word;
+  line-height: inherit;
+}
+.j1c2w4bd h1 .anchor-link-style, .j1c2w4bd h2 .anchor-link-style, .j1c2w4bd h3 .anchor-link-style, .j1c2w4bd h4 .anchor-link-style {
+  opacity: 0;
+  display: none;
+}
+.j1c2w4bd h1:hover .anchor-link-style, .j1c2w4bd h2:hover .anchor-link-style, .j1c2w4bd h3:hover .anchor-link-style, .j1c2w4bd h4:hover .anchor-link-style {
+  color: rgba(0, 0, 0, 0.38);
+  display: inline-block;
+  opacity: 1;
+  padding: 0 8px;
+}
+.j1c2w4bd h1:hover .anchor-link-style:hover, .j1c2w4bd h2:hover .anchor-link-style:hover, .j1c2w4bd h3:hover .anchor-link-style:hover, .j1c2w4bd h4:hover .anchor-link-style:hover {
+  color: rgba(0, 0, 0, 0.54);
+}
+.j1c2w4bd h1:hover .anchor-link-style svg, .j1c2w4bd h2:hover .anchor-link-style svg, .j1c2w4bd h3:hover .anchor-link-style svg, .j1c2w4bd h4:hover .anchor-link-style svg {
+  fill: currentColor;
+  width: 0.55em;
+  height: 0.55em;
+}
+</style><style data-jss="">
+.j11cbucf {
+  flex: 1 1 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-top: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .j11cbucf {
+    max-width: calc(100% - 167px);
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width:1280px) {
+  .j11cbucf {
+    max-width: calc(100% - 240px - 167px);
+    padding-left: 40px;
+    padding-right: 72px;
+  }
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.jb3bkca {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.j17up4uc {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+}
+.juv2ssg {
+  opacity: 0.3;
+  transform: scale(1);
+  animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation-name: j1tfb5h4;
+}
+.j16n8399 {
+  animation-duration: 200ms;
+}
+.j1xx15h0 {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  display: block;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.j14xc82s {
+  opacity: 0;
+  animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation-name: j1jv0ij5;
+}
+.jyte9nd {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: mui-ripple-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+  animation-name: j82okag;
+}
+@-webkit-keyframes j1tfb5h4 {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes j1jv0ij5 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes j82okag {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.jr0u89w {
+  color: inherit;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  outline: none;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  justify-content: center;
+  -moz-appearance: none;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.jr0u89w::-moz-focus-inner {
+  border-style: none;
+}
+.jr0u89w.j1p4cocs {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.j1g2vga5 {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.j1g2vga5:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.j1g2vga5.j1p4cocs {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .j1g2vga5:hover {
+    background-color: transparent;
+  }
+}
+.j1g2vga5:hover.j1p4cocs {
+  background-color: transparent;
+}
+.j5pbwdt {
+  color: inherit;
+}
+.j42ua74 {
+  color: #2196f3;
+}
+.j42ua74:hover {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+@media (hover: none) {
+  .j42ua74:hover {
+    background-color: transparent;
+  }
+}
+.j1q4g7ue {
+  color: rgb(225, 0, 80);
+}
+.j1q4g7ue:hover {
+  background-color: rgba(225, 0, 80, 0.08);
+}
+@media (hover: none) {
+  .j1q4g7ue:hover {
+    background-color: transparent;
+  }
+}
+.jsbmc5e {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiCollapse">
+.j1pb73ym {
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.j1p4enu9 {
+  height: auto;
+  overflow: visible;
+}
+.jzlkjnt {
+  display: flex;
+}
+.j12m3ddi {
+  width: 100%;
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.j2dfb39 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 24px;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}
+.jvtfs4r {
+  color: #2196f3;
+}
+.jed3mz {
+  color: rgb(225, 0, 80);
+}
+.jkrm1uh {
+  color: rgba(0, 0, 0, 0.54);
+}
+.j16eadl6 {
+  color: #f44336;
+}
+.j1jwuc4k {
+  color: rgba(0, 0, 0, 0.26);
+}
+.j83k217 {
+  font-size: inherit;
+}
+.j1nsn8k1 {
+  font-size: 20px;
+}
+.j1k2ops4 {
+  font-size: 35px;
+}
+</style><style data-jss="" data-meta="MuiModal">
+.jupvbsj {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1300;
+  position: fixed;
+}
+.jbzrort {
+  visibility: hidden;
+}
+</style><style data-jss="" data-meta="MuiPaper">
+.j15kd9e6 {
+  background-color: #fff;
+}
+.ji1kkbr {
+  border-radius: 4px;
+}
+.ju5k4mp {
+  box-shadow: none;
+}
+.j1nljlif {
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12);
+}
+.jt9nf5x {
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12);
+}
+.j1nd1ge8 {
+  box-shadow: 0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12);
+}
+.jsho2v5 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.j12ewbmg {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.j1gd6a31 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.j1sb3kky {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.j1vwt0oq {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.j1ejjdyj {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.j1s97fb2 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.j1hyrh9j {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.j1nd39nm {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.j3lp1 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.j15wriy7 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.jmc9s4x {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.j1o8jhny {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.j7a4pme {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.j2te27u {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.j3y7vum {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.j7j1ymr {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.j3hvo8w {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.jiw0pu5 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.j16ig864 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.j1iocy8x {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+</style><style data-jss="" data-meta="MuiPopover">
+.j1b219dr {
+  outline: none;
+  position: absolute;
+  min-width: 16px;
+  max-width: calc(100% - 32px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 16px;
+  max-height: calc(100% - 32px);
+}
+</style><style data-jss="" data-meta="MuiList">
+.j1afduyh {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+.jmwifwk {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.jsh745q {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.jy6dmor {
+  padding-top: 0;
+}
+</style><style data-jss="" data-meta="MuiMenu">
+.jtkimdt {
+  max-height: calc(100% - 96px);
+  -webkit-overflow-scrolling: touch;
+}
+</style><style data-jss="" data-meta="MuiListItem">
+.jn23b2n {
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.jn23b2n.j1kms6th, .jn23b2n.j1kms6th:hover, .jn23b2n.j1kms6th:focus {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.jvpp5ov {
+  position: relative;
+}
+.j10qoe32 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.j1fpph7a {
+  align-items: flex-start;
+}
+.jl7z7b2 {
+  opacity: 0.5;
+}
+.jzushn8 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background-clip: padding-box;
+}
+.j1a697ls {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.j1nroktp {
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.j1nroktp:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.j1nroktp:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+@media (hover: none) {
+  .j1nroktp:hover {
+    background-color: transparent;
+  }
+}
+.j19ml4o3 {
+  padding-right: 32px;
+}
+</style><style data-jss="" data-meta="MuiTooltip">
+.j1rvj2zq {
+  z-index: 1500;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.jej5k78 {
+  pointer-events: auto;
+}
+.j19svzuk {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: #616161;
+}
+.js2z4ou {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  line-height: 1.14286em;
+}
+.j1mzrh8l {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .j1mzrh8l {
+    margin: 0 14px;
+  }
+}
+.j6nzsrl {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .j6nzsrl {
+    margin: 0 14px;
+  }
+}
+.j5p79s4 {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .j5p79s4 {
+    margin: 14px 0;
+  }
+}
+.j7p9kn2 {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .j7p9kn2 {
+    margin: 14px 0;
+  }
+}
+</style><style data-jss="">
+.j1p7trm9 {
+  height: 400px;
+  border: none;
+  flex-grow: 1;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12);
+  background-color: #fafafa;
+}
+</style><style data-jss="" data-meta="MuiToggleButton">
+.j1ojmaub {
+  color: rgba(0, 0, 0, 0.38);
+  height: 32px;
+  margin: 0;
+  padding: 4px 12px;
+  font-size: 0.875rem;
+  min-width: 48px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 2px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.j1ojmaub.j1kms6th {
+  color: rgba(0, 0, 0, 0.54);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.j1ojmaub.j1p4cocs {
+  color: rgba(0, 0, 0, 0.12);
+}
+.j1ojmaub:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.j1ojmaub:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.j1ojmaub:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+@media (hover: none) {
+  .j1ojmaub:hover {
+    background-color: transparent;
+  }
+}
+.j1ojmaub:hover.j1p4cocs {
+  background-color: transparent;
+}
+.j1ojmaub.j1kms6th:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.jlyilep {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiToggleButtonGroup">
+.jo041vt {
+  overflow: hidden;
+  transition: background,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background: transparent;
+  border-radius: 2px;
+}
+.j1xh6sm2 {
+  background: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12);
+}
+</style><style data-jss="">
+.jbzf938 {
+  position: relative;
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: 40px;
+}
+@media (min-width:600px) {
+  .jbzf938 {
+    padding: 0 8px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.jpviftx {
+  display: flex;
+  padding: 20px;
+  border-radius: 4px;
+  justify-content: center;
+  background-color: #eeeeee;
+}
+@media (min-width:600px) {
+  .jpviftx {
+    padding: 24px;
+  }
+}
+.j1shsvg7 {
+  padding-top: 16px;
+}
+@media (min-width:600px) {
+  .j1shsvg7 {
+    padding-top: 24px;
+  }
+}
+.js98j86 {
+  display: none;
+  justify-content: space-between;
+}
+@media (min-width:600px) {
+  .js98j86 {
+    top: 0;
+    right: 8px;
+    display: flex;
+  }
+}
+.j4zly2q {
+  display: none;
+  padding: 0;
+  margin-right: 0;
+}
+@media (min-width:600px) {
+  .j4zly2q {
+    display: block;
+  }
+}
+.j4zly2q pre {
+  margin: 0px !important;
+  overflow: auto;
+  padding-top: 40px;
+  border-radius: 0px !important;
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.j59oks2 {
+  margin: 0;
+  display: block;
+}
+.jpvg1r3 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 7rem;
+  font-weight: 300;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.14286em;
+  margin-left: -.04em;
+  letter-spacing: -.04em;
+}
+.jfy2lc4 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.30357em;
+  margin-left: -.02em;
+  letter-spacing: -.02em;
+}
+.j1asq9b9 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.8125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.13333em;
+  margin-left: -.02em;
+}
+.j1g8m5fu {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.20588em;
+}
+.j9ol5ig {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.35417em;
+}
+.j7mgby4 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.3125rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.16667em;
+}
+.jczgco3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5em;
+}
+.j1n0vc23 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+}
+.j1pzzryc {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.jrvs7cg {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.jl5e6nh {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.j1e9o7xm {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 6rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.01562em;
+}
+.jbt7jvi {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 3.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.00833em;
+}
+.jyu3159 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 3rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: 0em;
+}
+.j14p8fj4 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 2.125rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.00735em;
+}
+.j1epcahh {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 0em;
+}
+.j1ylkzii {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.j1dp773x {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.jiavbt9 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.jp2tpt3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.j1xyp1js {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+.j8pgb1w {
+  text-align: left;
+}
+.jbmqzvk {
+  text-align: center;
+}
+.ju79mjg {
+  text-align: right;
+}
+.j4ipy1x {
+  text-align: justify;
+}
+.j15wl500 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ji1igi7 {
+  margin-bottom: 0.35em;
+}
+.jnywzu7 {
+  margin-bottom: 16px;
+}
+.j5pbwdt {
+  color: inherit;
+}
+.jvtfs4r {
+  color: #2196f3;
+}
+.jed3mz {
+  color: rgb(225, 0, 80);
+}
+.j101n95l {
+  color: rgba(0, 0, 0, 0.87);
+}
+.josmip3 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.j16eadl6 {
+  color: #f44336;
+}
+.j1i265yb {
+  display: inline;
+}
+</style><style data-jss="" data-meta="MuiAppBar">
+.j4wr6i4 {
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.j1rnr57d {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+}
+.j1qmqu3g {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+.j9uyurd {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: sticky;
+}
+.j15bq7fq {
+  position: static;
+}
+.jr0wjl8 {
+  position: relative;
+}
+.j1sh5rx1 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.j177wmhi {
+  color: #fff;
+  background-color: #2196f3;
+}
+.j1hvmbr7 {
+  color: #fff;
+  background-color: rgb(225, 0, 80);
+}
+</style><style data-jss="" data-meta="MuiToolbar">
+.j3ztss2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.jnjfdye {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .jnjfdye {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.j8q2nyx {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .j8q2nyx {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .j8q2nyx {
+    min-height: 64px;
+  }
+}
+.j16dzcez {
+  min-height: 48px;
+}
+</style><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+</style><style data-jss="" data-meta="MuiNProgressBar">
+#nprogress {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 1500;
+  position: fixed;
+  direction: ltr;
+  pointer-events: none;
+  background-color: #e0e0e0;
+}
+#nprogress .nprogress-bar {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  position: fixed;
+  background-color: #000;
+}
+#nprogress dd, #nprogress dt {
+  top: 0;
+  height: 2px;
+  position: absolute;
+  animation: nprogress-pulse 2s ease-out 0s infinite;
+  box-shadow: #000 1px 0 6px 1px;
+  border-radius: 100%;
+}
+#nprogress dd {
+  clip: rect(-6px,22px,14px,10px);
+  width: 20px;
+  right: 0;
+  opacity: 0.6;
+}
+#nprogress dt {
+  clip: rect(-6px,90px,14px,-6px);
+  width: 180px;
+  right: -80px;
+  opacity: 0.6;
+}
+@-webkit-keyframes nprogress-pulse {
+  30% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+</style><style data-jss="" data-meta="MuiLink">
+.j14kgtgl {
+  text-decoration: none;
+}
+.j1fqyx3o {
+  text-decoration: none;
+}
+.j1fqyx3o:hover {
+  text-decoration: underline;
+}
+.jdwjz0e {
+  text-decoration: underline;
+}
+.j1t7qxpo {
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  position: relative;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.j1t7qxpo::-moz-focus-inner {
+  border-style: none;
+}
+</style><style data-jss="" data-meta="MuiDrawer">
+.j1kfjtd7 {
+  flex: 0 0 auto;
+}
+.jidtec4 {
+  top: 0;
+  flex: 1 0 auto;
+  height: 100%;
+  display: flex;
+  z-index: 1200;
+  outline: none;
+  position: fixed;
+  overflow-y: auto;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+.jz0sf8t {
+  left: 0;
+  right: auto;
+}
+.j1rznyk0 {
+  left: auto;
+  right: 0;
+}
+.j1wsjubr {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: auto;
+  max-height: 100%;
+}
+.j18ulgqf {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  max-height: 100%;
+}
+.j1r8mx19 {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jrffpgy {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.jlv9wjd {
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.j5z6zb1 {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="" data-meta="MuiPrivateSwipeArea">
+.j6hitbn {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1199;
+  position: fixed;
+}
+.j1xxevx2 {
+  right: auto;
+}
+.j1aq49m {
+  left: auto;
+  right: 0;
+}
+.jk2eu27 {
+  right: 0;
+  bottom: auto;
+}
+.jtbxadw {
+  top: auto;
+  right: 0;
+  bottom: 0;
+}
+</style><style data-jss="" data-meta="MuiDivider">
+.j1c9j684 {
+  height: 1px;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.j4rxtpc {
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.j1ad42fy {
+  margin-left: 72px;
+}
+.j18lvecd {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.jsoig38 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+</style><style data-jss="" data-meta="MuiPrivateHiddenCss">
+@media (min-width:0px) and (max-width:599.95px) {
+  .jk4iq5 {
+    display: none;
+  }
+}
+@media (min-width:0px) {
+  .jbajwvs {
+    display: none;
+  }
+}
+@media (max-width:599.95px) {
+  .jwvdxpe {
+    display: none;
+  }
+}
+@media (min-width:600px) and (max-width:959.95px) {
+  .jjuf8cb {
+    display: none;
+  }
+}
+@media (min-width:600px) {
+  .j1mgnj6c {
+    display: none;
+  }
+}
+@media (max-width:959.95px) {
+  .j1khebic {
+    display: none;
+  }
+}
+@media (min-width:960px) and (max-width:1279.95px) {
+  .jk255s1 {
+    display: none;
+  }
+}
+@media (min-width:960px) {
+  .j1xdxvgg {
+    display: none;
+  }
+}
+@media (max-width:1279.95px) {
+  .j1yfekov {
+    display: none;
+  }
+}
+@media (min-width:1280px) and (max-width:1919.95px) {
+  .j9t48or {
+    display: none;
+  }
+}
+@media (min-width:1280px) {
+  .jwmuxve {
+    display: none;
+  }
+}
+@media (max-width:1919.95px) {
+  .jpbqins {
+    display: none;
+  }
+}
+@media (min-width:1920px) {
+  .jn72cwl {
+    display: none;
+  }
+}
+@media (min-width:1920px) {
+  .jnd5f33 {
+    display: none;
+  }
+}
+@media (min-width:0px) {
+  .j1me761d {
+    display: none;
+  }
+}
+</style><style data-jss="" data-meta="MuiButton">
+.j9la4jl {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  line-height: 1.75;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.j9la4jl:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.j9la4jl.j1p4cocs {
+  color: rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .j9la4jl:hover {
+    background-color: transparent;
+  }
+}
+.j9la4jl:hover.j1p4cocs {
+  background-color: transparent;
+}
+.jlyilep {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.j1hrif9t {
+  padding: 6px 8px;
+}
+.j14bbh75 {
+  color: #2196f3;
+}
+.j14bbh75:hover {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+@media (hover: none) {
+  .j14bbh75:hover {
+    background-color: transparent;
+  }
+}
+.j1y9307j {
+  color: rgb(225, 0, 80);
+}
+.j1y9307j:hover {
+  background-color: rgba(225, 0, 80, 0.08);
+}
+@media (hover: none) {
+  .j1y9307j:hover {
+    background-color: transparent;
+  }
+}
+.j5jkmku {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 5px 16px;
+}
+.j5jkmku.j1p4cocs {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+.j9ze19u {
+  color: #2196f3;
+  border: 1px solid rgba(33, 150, 243, 0.5);
+}
+.j9ze19u:hover {
+  border: 1px solid #2196f3;
+  background-color: rgba(33, 150, 243, 0.08);
+}
+@media (hover: none) {
+  .j9ze19u:hover {
+    background-color: transparent;
+  }
+}
+.j1xxvqug {
+  color: rgb(225, 0, 80);
+  border: 1px solid rgba(225, 0, 80, 0.5);
+}
+.j1xxvqug:hover {
+  border: 1px solid rgb(225, 0, 80);
+  background-color: rgba(225, 0, 80, 0.08);
+}
+.j1xxvqug.j1p4cocs {
+  border: 1px solid rgba(0, 0, 0, 0.26);
+}
+@media (hover: none) {
+  .j1xxvqug:hover {
+    background-color: transparent;
+  }
+}
+.jpyw0mp {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12);
+  background-color: #e0e0e0;
+}
+.jpyw0mp.j183vsso {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.jpyw0mp:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.jpyw0mp.j1p4cocs {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.jpyw0mp:hover {
+  background-color: #d5d5d5;
+}
+@media (hover: none) {
+  .jpyw0mp:hover {
+    background-color: #e0e0e0;
+  }
+}
+.jpyw0mp:hover.j1p4cocs {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.j1xs0a6r {
+  color: #fff;
+  background-color: #2196f3;
+}
+.j1xs0a6r:hover {
+  background-color: #1976d2;
+}
+@media (hover: none) {
+  .j1xs0a6r:hover {
+    background-color: #2196f3;
+  }
+}
+.j1qgefk9 {
+  color: #fff;
+  background-color: rgb(225, 0, 80);
+}
+.j1qgefk9:hover {
+  background-color: rgb(157, 0, 56);
+}
+@media (hover: none) {
+  .j1qgefk9:hover {
+    background-color: rgb(225, 0, 80);
+  }
+}
+.jefewg2 {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  min-width: 0;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+  border-radius: 50%;
+}
+.jefewg2:active {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.j1xwb4h {
+  width: auto;
+  height: 48px;
+  padding: 0 16px;
+  min-width: 48px;
+  border-radius: 24px;
+}
+.jwm9s4l {
+  color: inherit;
+  border-color: currentColor;
+}
+.jpl6q6m {
+  width: 40px;
+  height: 40px;
+}
+.jkjbjgt {
+  padding: 4px 8px;
+  min-width: 64px;
+  font-size: 0.8125rem;
+}
+.j1h1ts3f {
+  padding: 8px 24px;
+  font-size: 0.9375rem;
+}
+.jajq0dx {
+  width: 100%;
+}
+</style><style data-jss="">
+.jatl47d {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.jhr3lg7 {
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.j1q3si2 {
+  width: 100%;
+  letter-spacing: 0;
+  text-transform: none;
+  justify-content: flex-start;
+}
+.j17qzaty {
+  width: 100%;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  justify-content: flex-start;
+}
+.j17qzaty.depth-0 {
+  font-weight: 500;
+}
+.j4kp1ve {
+  color: #2196f3;
+  font-weight: 500;
+}
+</style><style data-jss="">
+.jqxrewz {
+  width: 240px;
+}
+.j12c2nrr {
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 4px;
+}
+.j12c2nrr:hover {
+  color: #2196f3;
+}
+.jtcttkl {
+  display: flex;
+}
+.j1ms9ptc {
+  display: flex;
+  flex-grow: 1;
+  min-height: 56px;
+  align-items: flex-start;
+  padding-left: 24px;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .j1ms9ptc {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .j1ms9ptc {
+    min-height: 64px;
+  }
+}
+</style><style data-jss="" data-meta="MuiInputBase">
+.jbr6nlo {
+  color: rgba(0, 0, 0, 0.87);
+  cursor: text;
+  display: inline-flex;
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.1875em;
+  align-items: center;
+}
+.jbr6nlo.j1p4cocs {
+  color: rgba(0, 0, 0, 0.38);
+  cursor: default;
+}
+.j1o1kaqg {
+  padding: 6px 0 7px;
+}
+.jajq0dx {
+  width: 100%;
+}
+.j4ap7vg {
+  font: inherit;
+  color: currentColor;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 6px 0 7px;
+  display: block;
+  min-width: 0;
+  box-sizing: content-box;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.j4ap7vg::-webkit-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.j4ap7vg::-moz-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.j4ap7vg:-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.j4ap7vg::-ms-input-placeholder {
+  color: currentColor;
+  opacity: 0.42;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.j4ap7vg:focus {
+  outline: 0;
+}
+.j4ap7vg:invalid {
+  box-shadow: none;
+}
+.j4ap7vg::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.j4ap7vg.j1p4cocs {
+  opacity: 1;
+}
+label[data-shrink=false] + .j16xsnpf .j4ap7vg::-webkit-input-placeholder {
+  opacity: 0;
+}
+label[data-shrink=false] + .j16xsnpf .j4ap7vg::-moz-placeholder {
+  opacity: 0;
+}
+label[data-shrink=false] + .j16xsnpf .j4ap7vg:-ms-input-placeholder {
+  opacity: 0;
+}
+label[data-shrink=false] + .j16xsnpf .j4ap7vg::-ms-input-placeholder {
+  opacity: 0;
+}
+label[data-shrink=false] + .j16xsnpf .j4ap7vg:focus::-webkit-input-placeholder {
+  opacity: 0.42;
+}
+label[data-shrink=false] + .j16xsnpf .j4ap7vg:focus::-moz-placeholder {
+  opacity: 0.42;
+}
+label[data-shrink=false] + .j16xsnpf .j4ap7vg:focus:-ms-input-placeholder {
+  opacity: 0.42;
+}
+label[data-shrink=false] + .j16xsnpf .j4ap7vg:focus::-ms-input-placeholder {
+  opacity: 0.42;
+}
+.j1fzhfpc {
+  padding-top: 3px;
+}
+.j1pa5zxf {
+  resize: none;
+  padding: 0;
+}
+.j1nggvg6 {
+  height: 1.1875em;
+}
+.jsxres5 {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+}
+</style><style data-jss="" data-meta="MuiInput">
+.j77gjdk {
+  position: relative;
+}
+label + .j5t5fws {
+  margin-top: 16px;
+}
+.jm0f6:after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+  border-bottom: 2px solid #1976d2;
+  pointer-events: none;
+}
+.jm0f6.j18v6f3k:after {
+  transform: scaleX(1);
+}
+.jm0f6.j1t2cgc0:after {
+  transform: scaleX(1);
+  border-bottom-color: #f44336;
+}
+.jm0f6:before {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "\00a0";
+  position: absolute;
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  pointer-events: none;
+}
+.jm0f6:hover:not(.j1p4cocs):not(.j18v6f3k):not(.j1t2cgc0):before {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+}
+.jm0f6.j1p4cocs:before {
+  border-bottom-style: dotted;
+}
+@media (hover: none) {
+  .jm0f6:hover:not(.j1p4cocs):not(.j18v6f3k):not(.j1t2cgc0):before {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  }
+}
+</style><style data-jss="">
+.algolia-autocomplete .ds-dropdown-menu {
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12);
+  border-radius: 4px;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header-lvl0 {
+  color: rgba(0, 0, 0, 0.87);
+}
+.algolia-autocomplete .algolia-docsearch-suggestion .algolia-docsearch-suggestion--subcategory-column {
+  width: 30%;
+  opacity: 1;
+  padding: 5.33px 10.66px;
+  text-align: right;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion .algolia-docsearch-suggestion--content {
+  float: right;
+  width: 70%;
+  padding: 5.33px 0 5.33px 10.66px;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column-text {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 400;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+  color: #174d8c;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion {
+  text-decoration: none;
+  background-color: #fff;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.algolia-autocomplete .algolia-docsearch-suggestion--text {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+}
+.algolia-autocomplete.algolia-autocomplete .algolia-docsearch-suggestion--no-results {
+  width: 100%;
+}
+.algolia-autocomplete b {
+  font-weight: 500;
+}
+.algolia-autocomplete.algolia-autocomplete .algolia-docsearch-suggestion--no-results::before {
+  display: none;
+}
+.algolia-autocomplete .ds-dropdown-menu::before {
+  display: none;
+}
+.algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
+  border: 0;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.jtybdoy {
+  position: relative;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  margin-left: 8px;
+  margin-right: 16px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.jtybdoy:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.jtybdoy .j13nia4b {
+  width: 120px;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.jtybdoy .j13nia4b:focus {
+  width: 170px;
+}
+.j1158xje {
+  width: 72px;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+}
+.jiza1ht {
+  color: inherit;
+}
+.j13nia4b {
+  padding: 8px 8px 8px 72px;
+}
+</style><style data-jss="" data-meta="MuiSnackbar">
+.j1mqxag8 {
+  left: 0;
+  right: 0;
+  z-index: 1400;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+.jvrepy9 {
+  top: 0;
+}
+@media (min-width:960px) {
+  .jvrepy9 {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+.j1y2w6h8 {
+  bottom: 0;
+}
+@media (min-width:960px) {
+  .j1y2w6h8 {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+.j1oue97c {
+  top: 0;
+  justify-content: flex-end;
+}
+@media (min-width:960px) {
+  .j1oue97c {
+    top: 24px;
+    left: auto;
+    right: 24px;
+  }
+}
+.j1gorz5y {
+  bottom: 0;
+  justify-content: flex-end;
+}
+@media (min-width:960px) {
+  .j1gorz5y {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+.j1f05pj8 {
+  top: 0;
+  justify-content: flex-start;
+}
+@media (min-width:960px) {
+  .j1f05pj8 {
+    top: 24px;
+    left: 24px;
+    right: auto;
+  }
+}
+.jymqzx {
+  bottom: 0;
+  justify-content: flex-start;
+}
+@media (min-width:960px) {
+  .jymqzx {
+    left: 24px;
+    right: auto;
+    bottom: 24px;
+  }
+}
+</style><style data-jss="">
+.jlmrws6 {
+  display: flex;
+}
+.j1pg0g6x {
+  flex: 1 1 auto;
+}
+.j1cwgun4 {
+  flex: 0 1 auto;
+  margin-left: 24px;
+}
+.jllroop {
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+@media print {
+  .jllroop {
+    position: absolute;
+  }
+}
+.j14j97xx {
+  box-shadow: none;
+}
+@media (min-width:1280px) {
+  .j43ekj7 {
+    width: calc(100% - 240px);
+  }
+}
+@media (min-width:1280px) {
+  .j1pjypdo {
+    width: 240px;
+  }
+}
+@media (min-width:1280px) {
+  .j123h6rw {
+    display: none;
+  }
+}
+</style><style data-jss="">
+.j27y9d5 {
+  top: 70px;
+  width: 167px;
+  order: 2;
+  height: calc(100vh - 70px);
+  padding: 16px 16px 16px 5px;
+  display: none;
+  position: sticky;
+  margin-top: 70px;
+  word-break: break-word;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+@media (min-width:600px) {
+  .j27y9d5 {
+    display: block;
+  }
+}
+.j8ld3w7 {
+  margin-top: 16px;
+}
+.j11eyvhd {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.j1wk4s6p {
+  padding: 4px 0;
+  font-size: 13px;
+}
+</style><style data-jss="">
+#carbonads {
+  padding: 8px 8px 8px 138px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #fff;
+}
+#carbonads .carbon-img {
+  float: left;
+  margin-left: -130px;
+  margin-right: 8px;
+}
+#carbonads img {
+  vertical-align: middle;
+}
+#carbonads a {
+  text-decoration: none;
+}
+#carbonads .carbon-text {
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01071em;
+}
+#carbonads .carbon-poweredby {
+  color: rgba(0, 0, 0, 0.54);
+  display: block;
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+</style><style data-jss="">
+.j74pxz5 {
+  display: block;
+  position: relative;
+  max-width: 345px;
+  min-height: 116px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.j1xwqjtr {
+  color: rgba(0, 0, 0, 0.87);
+  right: 0;
+  cursor: default;
+  bottom: 0;
+  padding: 8px;
+  position: absolute;
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.j1qgpmj5 {
+  padding: 8px;
+  display: block;
+}
+</style><style data-jss="">
+.j4rdg75 {
+  margin-bottom: 100px;
+}
+.j1108rq9 {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.j1rqdocf {
+  padding: 0 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+</style><style data-jss="">
+.j1x73vu9 {
+  width: 250px;
+}
+.j1lw5fbw {
+  width: auto;
+}
+</style><style data-jss="">
+.j1x73vu9 {
+  width: 250px;
+}
+.j1lw5fbw {
+  width: auto;
+}
+</style><style data-prism="true">/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style><script async="" src="./Drawer React component - Material-UI_files/analytics.js.download"></script><script async="" src="./Drawer React component - Material-UI_files/docsearch.min.js.download"></script><script id="_carbonads_projs" type="text/javascript" src="./Drawer React component - Material-UI_files/CKYIL27L.json"></script></head><body dir="ltr" style=""><div id="__next"><div class="jlmrws6"><header class="j15kd9e6 jsho2v5 j4wr6i4 j1rnr57d j177wmhi mui-fixed jllroop j43ekj7" style="padding-right: 0px;"><div class="j3ztss2 j8q2nyx jnjfdye"><button class="jr0u89w j1g2vga5 j5pbwdt j123h6rw" tabindex="0" type="button" aria-label="Open drawer"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></span><span class="jb3bkca"></span></button><h6 class="j59oks2 j1ylkzii j5pbwdt j15wl500 j1cwgun4">Drawers</h6><div class="j1pg0g6x"></div><div class="jtybdoy" style="display: flex;"><div class="j1158xje"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></div><div class="jbr6nlo j77gjdk jiza1ht j18v6f3k j18v6f3k"><span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input class="j4ap7vg j1kgyffs j13nia4b ds-input" id="docsearch-input" placeholder="Search…" type="text" value="" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Roboto, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; left: 0px; right: auto; display: none;"><div class="ds-dataset-1"></div></span></span></div></div><button class="jr0u89w j1g2vga5 j5pbwdt" tabindex="0" type="button" aria-haspopup="true" data-ga-event-category="AppBar" data-ga-event-action="language" title="Change language"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5 j5pbwdt" tabindex="0" role="button" aria-label="Edit docs colors" data-ga-event-category="AppBar" data-ga-event-action="colors" title="Edit docs colors" href="https://material-ui.com/style/color/#color-tool"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M24 0H0v24h24z"></path><path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58c2.05 0 4.1-.78 5.66-2.34 3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5 j5pbwdt" tabindex="0" type="button" aria-label="Toggle light/dark theme" data-ga-event-category="AppBar" data-ga-event-action="dark" title="Toggle light/dark theme"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5 j5pbwdt" tabindex="0" type="button" aria-label="Toggle right-to-left/left-to-right" data-ga-event-category="AppBar" data-ga-event-action="rtl" title="Toggle right-to-left/left-to-right"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M10 10v5h2V4h2v11h2V4h2V2h-8C7.79 2 6 3.79 6 6s1.79 4 4 4zm-2 7v-3l-4 4 4 4v-3h12v-2H8z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5 j5pbwdt" tabindex="0" role="button" href="https://github.com/mui-org/material-ui" aria-label="GitHub repository" data-ga-event-category="AppBar" data-ga-event-action="github" title="GitHub repository"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a></div></header><nav class="j1pjypdo"><div class="j1yfekov"><div class="j1gl2ulm j1kfjtd7"><div class="j15kd9e6 ju5k4mp jidtec4 jqxrewz jz0sf8t j1r8mx19"><div><div class="jtcttkl"><div class="j1ms9ptc"><a class="j59oks2 j1ylkzii j5pbwdt j1i265yb j1gl2ulm j1fqyx3o j12c2nrr" href="https://material-ui.com/">Material-UI</a><a class="j59oks2 jrvs7cg josmip3 j1i265yb j1gl2ulm j1fqyx3o" href="https://material-ui.com/versions/">v3.9.2</a></div></div><hr class="j1c9j684"><ul class="j1afduyh jmwifwk"><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Getting Started</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Style</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Layout</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Utils</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep algolia-lvl0">Component Demos</span><span class="jb3bkca"></span></button><div class="j1pb73ym j1p4enu9" style="min-height:0px"><div class="jzlkjnt"><div class="j12m3ddi"><ul class="j1afduyh jmwifwk"><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/app-bar/"><span class="jlyilep">App Bar</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/autocomplete/"><span class="jlyilep">Autocomplete</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/avatars/"><span class="jlyilep">Avatars</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/badges/"><span class="jlyilep">Badges</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/bottom-navigation/"><span class="jlyilep">Bottom Navigation</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/buttons/"><span class="jlyilep">Buttons</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/cards/"><span class="jlyilep">Cards</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/chips/"><span class="jlyilep">Chips</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/dialogs/"><span class="jlyilep">Dialogs</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/dividers/"><span class="jlyilep">Dividers</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1 j4kp1ve" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/drawers/"><span class="jlyilep">Drawers</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/expansion-panels/"><span class="jlyilep">Expansion Panels</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/grid-list/"><span class="jlyilep">Grid List</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/lists/"><span class="jlyilep">Lists</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/menus/"><span class="jlyilep">Menus</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/paper/"><span class="jlyilep">Paper</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/pickers/"><span class="jlyilep">Pickers</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/progress/"><span class="jlyilep">Progress</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/selection-controls/"><span class="jlyilep">Selection Controls</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/selects/"><span class="jlyilep">Selects</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/snackbars/"><span class="jlyilep">Snackbars</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/steppers/"><span class="jlyilep">Steppers</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/tables/"><span class="jlyilep">Tables</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/tabs/"><span class="jlyilep">Tabs</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/text-fields/"><span class="jlyilep">Text Fields</span></a></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-1" tabindex="0" role="button" style="padding-left:40px" href="https://material-ui.com/demos/tooltips/"><span class="jlyilep">Tooltips</span></a></li></ul></div></div></div></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Component API</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">CSS in JS (alpha)</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">System (alpha)</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Customization</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Guides</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jhr3lg7"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p j17qzaty depth-0" tabindex="0" role="button" style="padding-left:24px" href="https://material-ui.com/premium-themes/"><span class="jlyilep">Premium Themes</span></a></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Lab</span><span class="jb3bkca"></span></button></li><li class="jn23b2n jb0yxa9 jatl47d"><button class="jr0u89w j9la4jl j1q3si2 j1hrif9t jfvka4p" tabindex="0" type="button" style="padding-left:24px"><span class="jlyilep">Discover More</span><span class="jb3bkca"></span></button></li></ul></div></div></div></div></nav><nav class="j27y9d5"><p class="j59oks2 j1n0vc23 ji1igi7 j8ld3w7">Contents</p><ul class="j59oks2 j1n0vc23 j11eyvhd"><li><a class="j59oks2 josmip3 j1gl2ulm j1fqyx3o j1wk4s6p" href="https://material-ui.com/#temporary-drawer"><span>Temporary drawer</span></a></li><li><a class="j59oks2 josmip3 j1gl2ulm j1fqyx3o j1wk4s6p" href="https://material-ui.com/#swipeable-temporary-drawer"><span>Swipeable Temporary drawer</span></a></li><li><a class="j59oks2 josmip3 j1gl2ulm j1fqyx3o j1wk4s6p" href="https://material-ui.com/#responsive-drawer"><span>Responsive drawer</span></a></li><li><a class="j59oks2 josmip3 j1gl2ulm j1fqyx3o j1wk4s6p" href="https://material-ui.com/#persistent-drawer"><span>Persistent drawer</span></a></li><li><a class="j59oks2 j101n95l j1gl2ulm j1fqyx3o j1wk4s6p" href="https://material-ui.com/#mini-variant-drawer"><span>Mini variant drawer</span></a></li><li><a class="j59oks2 josmip3 j1gl2ulm j1fqyx3o j1wk4s6p" href="https://material-ui.com/#permanent-drawer"><span>Permanent drawer</span></a><ul class="j11eyvhd"><li><a class="j59oks2 josmip3 j1gl2ulm j1fqyx3o j1wk4s6p" style="padding-left:16px" href="https://material-ui.com/#full-height-navigation"><span>Full-height navigation</span></a></li><li><a class="j59oks2 josmip3 j1gl2ulm j1fqyx3o j1wk4s6p" style="padding-left:16px" href="https://material-ui.com/#clipped-under-the-app-bar"><span>Clipped under the app bar</span></a></li></ul></li><li><a class="j59oks2 josmip3 j1gl2ulm j1fqyx3o j1wk4s6p" href="https://material-ui.com/#api"><span>API</span></a></li></ul></nav><main class="j11cbucf j4rdg75"><div class="j1108rq9"><a class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" role="button" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/drawers.md"><span class="jlyilep">Edit this page</span><span class="jb3bkca"></span></a></div><div class="j1c2w4bd markdown-body j1rqdocf">
+    <h1>
+      <a class="anchor-link" id="drawer"></a>Drawer<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#drawer">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h1>
+  <p class="description">Navigation drawers provide access to destinations in your app. Side sheets are surfaces containing supplementary content that are anchored to the left or right edge of the screen.<span class="j74pxz5"><span id="carbon-ad"><script async="" src="./Drawer React component - Material-UI_files/carbon.js.download" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://srv.carbonads.net/ads/click/x/GTND42QMCTSD4KJJCESLYKQMCWYDK2JECVSICZ3JCWBIT27MCTBIV2JKC6BIPK3MFTBDEK3EHJNCLSIZ?segment=placement:material-uicom;" class="carbon-img" target="_blank" rel="noopener"><img src="./Drawer React component - Material-UI_files/1525189887-61450.png" alt="" border="0" height="100" width="130" style="max-width: 130px;"></a><a href="https://srv.carbonads.net/ads/click/x/GTND42QMCTSD4KJJCESLYKQMCWYDK2JECVSICZ3JCWBIT27MCTBIV2JKC6BIPK3MFTBDEK3EHJNCLSIZ?segment=placement:material-uicom;" class="carbon-text" target="_blank" rel="noopener">Students and Teachers, save up to 60% on Adobe Creative Cloud.</a></span><a href="http://carbonads.net/?utm_source=material-uicom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon" class="carbon-poweredby" target="_blank" rel="noopener">ads via Carbon</a></span></div></span><span class="j1xwqjtr" title="This ad is designed to support Open Source.">i</span></span></p>
+
+<p><a href="https://material.io/design/components/navigation-drawer.html" target="_blank" rel="noopener nofollow">Navigation drawers</a> provide access to destinations and app functionality, such as switching accounts. They can either be permanently on-screen or controlled by a navigation menu icon.</p>
+<p><a href="https://material.io/design/components/sheets-side.html" target="_blank" rel="noopener nofollow">Side sheets</a> are supplementary surfaces primarily used on tablet and desktop.</p>
+
+    <h2>
+      <a class="anchor-link" id="temporary-drawer"></a>Temporary drawer<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#temporary-drawer">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h2>
+  <p>Temporary navigation drawers can toggle open or closed. Closed by default, the drawer opens temporarily above all other content until a section is selected.</p>
+<p>The Drawer can be cancelled by clicking the overlay or pressing the Esc key.
+It closes when an item is selected, handled by controlling the <code>open</code> prop.</p>
+</div><div class="jbzf938"><div><div class="js98j86"><div style="opacity:0;padding:8px 0px"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/TemporaryDrawer.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/TemporaryDrawer.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1ojmaub" tabindex="0" type="button" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/TemporaryDrawer.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span><span class="jb3bkca"></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/TemporaryDrawer.js" data-ga-event-action="expand" aria-label="Show the source" title="Show the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/TemporaryDrawer.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/TemporaryDrawer.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/TemporaryDrawer.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div></div><div class="jpviftx"><div><button class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" type="button"><span class="jlyilep">Open Left</span><span class="jb3bkca"></span></button><button class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" type="button"><span class="jlyilep">Open Right</span><span class="jb3bkca"></span></button><button class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" type="button"><span class="jlyilep">Open Top</span><span class="jb3bkca"></span></button><button class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" type="button"><span class="jlyilep">Open Bottom</span><span class="jb3bkca"></span></button></div></div></div><div class="j1c2w4bd markdown-body j1rqdocf">
+    <h2>
+      <a class="anchor-link" id="swipeable-temporary-drawer"></a>Swipeable Temporary drawer<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#swipeable-temporary-drawer">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h2>
+  <p>You can make the drawer swipeable with the <code>SwipeableDrawer</code> component.</p>
+<p>This component comes with a 2 kB gzipped payload overhead.
+Some low-end mobile devices won't be able to follow the fingers at 60 FPS.
+You can use the <code>disableBackdropTransition</code> property to help.</p>
+</div><div class="jbzf938"><div><div class="js98j86"><div style="opacity:0;padding:8px 0px"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/SwipeableTemporaryDrawer.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/SwipeableTemporaryDrawer.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1ojmaub" tabindex="0" type="button" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/SwipeableTemporaryDrawer.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span><span class="jb3bkca"></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/SwipeableTemporaryDrawer.js" data-ga-event-action="expand" aria-label="Show the source" title="Show the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/SwipeableTemporaryDrawer.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/SwipeableTemporaryDrawer.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/SwipeableTemporaryDrawer.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div></div><div class="jpviftx"><div><button class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" type="button"><span class="jlyilep">Open Left</span><span class="jb3bkca"></span></button><button class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" type="button"><span class="jlyilep">Open Right</span><span class="jb3bkca"></span></button><button class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" type="button"><span class="jlyilep">Open Top</span><span class="jb3bkca"></span></button><button class="jr0u89w j9la4jl j1hrif9t jfvka4p" tabindex="0" type="button"><span class="jlyilep">Open Bottom</span><span class="jb3bkca"></span></button><div class="j6hitbn j1xxevx2" style="width: 20px;"></div><div class="j6hitbn jk2eu27" style="height: 20px;"></div><div class="j6hitbn jtbxadw" style="height: 20px;"></div><div class="j6hitbn j1aq49m" style="width: 20px;"></div></div></div></div><div class="j1c2w4bd markdown-body j1rqdocf"><p>We are using the following set of properties on this documentation website for optimal usability of the component:</p>
+<ul>
+<li>iOS is hosted on high-end devices.
+We can enable the backdrop transition without dropping frames.
+The performance will be good enough.</li>
+<li>iOS has a "swipe to go back" feature that mess
+with the discovery feature. We have to disable it.</li>
+</ul>
+<pre><code class="language-jsx"><span class="token keyword">const</span> iOS <span class="token operator">=</span> process<span class="token punctuation">.</span>browser <span class="token operator">&amp;&amp;</span> <span class="token regex">/iPad|iPhone|iPod/</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>navigator<span class="token punctuation">.</span>userAgent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>SwipeableDrawer</span> <span class="token attr-name">disableBackdropTransition</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token operator">!</span>iOS<span class="token punctuation">}</span></span> <span class="token attr-name">disableDiscovery</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>iOS<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span></code></pre>
+
+    <h2>
+      <a class="anchor-link" id="responsive-drawer"></a>Responsive drawer<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#responsive-drawer">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h2>
+  <p>The <code>Hidden</code> responsive helper component allows showing different types of drawer depending on the screen width.
+A <code>temporary</code> drawer is shown for small screens while a <code>permanent</code> drawer is shown for wider screens.</p>
+</div><div class="jbzf938"><div><div class="js98j86"><div style="opacity:0;padding:8px 0px"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/ResponsiveDrawer.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/ResponsiveDrawer.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1ojmaub" tabindex="0" type="button" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/ResponsiveDrawer.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span><span class="jb3bkca"></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/ResponsiveDrawer.js" data-ga-event-action="expand" aria-label="Show the source" title="Show the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/ResponsiveDrawer.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/ResponsiveDrawer.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/ResponsiveDrawer.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div></div><div class="jpviftx"><iframe class="j1p7trm9" src="./Drawer React component - Material-UI_files/saved_resource.html"></iframe></div></div><div class="j1c2w4bd markdown-body j1rqdocf">
+    <h2>
+      <a class="anchor-link" id="persistent-drawer"></a>Persistent drawer<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#persistent-drawer">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h2>
+  <p>Persistent navigation drawers can toggle open or closed.
+The drawer sits on the same surface elevation as the content.
+It is closed by default and opens by selecting the menu icon, and stays open until closed by the user.
+The state of the drawer is remembered from action to action and session to session.</p>
+<p>When the drawer is outside of the page grid and opens, the drawer forces other content to change size and adapt to the smaller viewport.</p>
+<p>Persistent navigation drawers are acceptable for all sizes larger than mobile.
+They are not recommended for apps with multiple levels of hierarchy that require using an up arrow for navigation.</p>
+</div><div class="jbzf938"><div><div class="js98j86"><div style="opacity: 1; padding: 8px 0px; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/PersistentDrawerLeft.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/PersistentDrawerLeft.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1ojmaub" tabindex="0" type="button" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/PersistentDrawerLeft.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span><span class="jb3bkca"></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/PersistentDrawerLeft.js" data-ga-event-action="expand" aria-label="Hide the source" title="Hide the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/PersistentDrawerLeft.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/PersistentDrawerLeft.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/PersistentDrawerLeft.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div><div class="j1pb73ym j1p4enu9" style="min-height: 0px; height: auto; transition-duration: 300ms;"><div class="jzlkjnt"><div class="j12m3ddi"><div class="j1c2w4bd markdown-body j4zly2q" dir="ltr"><pre><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> PropTypes <span class="token keyword">from</span> <span class="token string">'prop-types'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> classNames <span class="token keyword">from</span> <span class="token string">'classnames'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> withStyles <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@material-ui/core/styles'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Drawer <span class="token keyword">from</span> <span class="token string">'@material-ui/core/Drawer'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> CssBaseline <span class="token keyword">from</span> <span class="token string">'@material-ui/core/CssBaseline'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> AppBar <span class="token keyword">from</span> <span class="token string">'@material-ui/core/AppBar'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Toolbar <span class="token keyword">from</span> <span class="token string">'@material-ui/core/Toolbar'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> List <span class="token keyword">from</span> <span class="token string">'@material-ui/core/List'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Typography <span class="token keyword">from</span> <span class="token string">'@material-ui/core/Typography'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Divider <span class="token keyword">from</span> <span class="token string">'@material-ui/core/Divider'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> IconButton <span class="token keyword">from</span> <span class="token string">'@material-ui/core/IconButton'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> MenuIcon <span class="token keyword">from</span> <span class="token string">'@material-ui/icons/Menu'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ChevronLeftIcon <span class="token keyword">from</span> <span class="token string">'@material-ui/icons/ChevronLeft'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ChevronRightIcon <span class="token keyword">from</span> <span class="token string">'@material-ui/icons/ChevronRight'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ListItem <span class="token keyword">from</span> <span class="token string">'@material-ui/core/ListItem'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ListItemIcon <span class="token keyword">from</span> <span class="token string">'@material-ui/core/ListItemIcon'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ListItemText <span class="token keyword">from</span> <span class="token string">'@material-ui/core/ListItemText'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> InboxIcon <span class="token keyword">from</span> <span class="token string">'@material-ui/icons/MoveToInbox'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> MailIcon <span class="token keyword">from</span> <span class="token string">'@material-ui/icons/Mail'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> drawerWidth <span class="token operator">=</span> <span class="token number">240</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">styles</span> <span class="token operator">=</span> theme <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  root<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> <span class="token string">'flex'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  appBar<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    transition<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'margin'</span><span class="token punctuation">,</span> <span class="token string">'width'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      easing<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span>easing<span class="token punctuation">.</span>sharp<span class="token punctuation">,</span>
+      duration<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span>duration<span class="token punctuation">.</span>leavingScreen<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  appBarShift<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`calc(100% - </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>drawerWidth<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">px)`</span></span><span class="token punctuation">,</span>
+    marginLeft<span class="token punctuation">:</span> drawerWidth<span class="token punctuation">,</span>
+    transition<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'margin'</span><span class="token punctuation">,</span> <span class="token string">'width'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      easing<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span>easing<span class="token punctuation">.</span>easeOut<span class="token punctuation">,</span>
+      duration<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span>duration<span class="token punctuation">.</span>enteringScreen<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  menuButton<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    marginLeft<span class="token punctuation">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+    marginRight<span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  hide<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  drawer<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> drawerWidth<span class="token punctuation">,</span>
+    flexShrink<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  drawerPaper<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> drawerWidth<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  drawerHeader<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    display<span class="token punctuation">:</span> <span class="token string">'flex'</span><span class="token punctuation">,</span>
+    alignItems<span class="token punctuation">:</span> <span class="token string">'center'</span><span class="token punctuation">,</span>
+    padding<span class="token punctuation">:</span> <span class="token string">'0 8px'</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>theme<span class="token punctuation">.</span>mixins<span class="token punctuation">.</span>toolbar<span class="token punctuation">,</span>
+    justifyContent<span class="token punctuation">:</span> <span class="token string">'flex-end'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  content<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    flexGrow<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    padding<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>spacing<span class="token punctuation">.</span>unit <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    transition<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string">'margin'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      easing<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span>easing<span class="token punctuation">.</span>sharp<span class="token punctuation">,</span>
+      duration<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span>duration<span class="token punctuation">.</span>leavingScreen<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    marginLeft<span class="token punctuation">:</span> <span class="token operator">-</span>drawerWidth<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  contentShift<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    transition<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string">'margin'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      easing<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span>easing<span class="token punctuation">.</span>easeOut<span class="token punctuation">,</span>
+      duration<span class="token punctuation">:</span> theme<span class="token punctuation">.</span>transitions<span class="token punctuation">.</span>duration<span class="token punctuation">.</span>enteringScreen<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    marginLeft<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">PersistentDrawerLeft</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    open<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function-variable function">handleDrawerOpen</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> open<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function-variable function">handleDrawerClose</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> open<span class="token punctuation">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> classes<span class="token punctuation">,</span> theme <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> open <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>classes<span class="token punctuation">.</span>root<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>CssBaseline</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AppBar</span>
+          <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fixed<span class="token punctuation">"</span></span>
+          <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">classNames</span><span class="token punctuation">(</span>classes<span class="token punctuation">.</span>appBar<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">[</span>classes<span class="token punctuation">.</span>appBarShift<span class="token punctuation">]</span><span class="token punctuation">:</span> open<span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+        <span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Toolbar</span> <span class="token attr-name">disableGutters</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token operator">!</span>open<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IconButton</span>
+              <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>inherit<span class="token punctuation">"</span></span>
+              <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Open drawer<span class="token punctuation">"</span></span>
+              <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleDrawerOpen<span class="token punctuation">}</span></span>
+              <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">classNames</span><span class="token punctuation">(</span>classes<span class="token punctuation">.</span>menuButton<span class="token punctuation">,</span> open <span class="token operator">&amp;&amp;</span> classes<span class="token punctuation">.</span>hide<span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+            <span class="token punctuation">&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MenuIcon</span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>IconButton</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Typography</span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>h6<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>inherit<span class="token punctuation">"</span></span> <span class="token attr-name">noWrap</span><span class="token punctuation">&gt;</span></span>
+              Persistent drawer
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Typography</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Toolbar</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>AppBar</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Drawer</span>
+          <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>classes<span class="token punctuation">.</span>drawer<span class="token punctuation">}</span></span>
+          <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>persistent<span class="token punctuation">"</span></span>
+          <span class="token attr-name">anchor</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>left<span class="token punctuation">"</span></span>
+          <span class="token attr-name">open</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>open<span class="token punctuation">}</span></span>
+          <span class="token attr-name">classes</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+            paper<span class="token punctuation">:</span> classes<span class="token punctuation">.</span>drawerPaper<span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+        <span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>classes<span class="token punctuation">.</span>drawerHeader<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>IconButton</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleDrawerClose<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+              <span class="token punctuation">{</span>theme<span class="token punctuation">.</span>direction <span class="token operator">===</span> <span class="token string">'ltr'</span> <span class="token operator">?</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ChevronLeftIcon</span> <span class="token punctuation">/&gt;</span></span> <span class="token punctuation">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ChevronRightIcon</span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>IconButton</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Divider</span> <span class="token punctuation">/&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>List</span><span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token string">'Inbox'</span><span class="token punctuation">,</span> <span class="token string">'Starred'</span><span class="token punctuation">,</span> <span class="token string">'Send email'</span><span class="token punctuation">,</span> <span class="token string">'Drafts'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>text<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItem</span> <span class="token attr-name">button</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItemIcon</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>index <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>InboxIcon</span> <span class="token punctuation">/&gt;</span></span> <span class="token punctuation">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MailIcon</span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ListItemIcon</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItemText</span> <span class="token attr-name">primary</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ListItem</span><span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>List</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Divider</span> <span class="token punctuation">/&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>List</span><span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token string">'All mail'</span><span class="token punctuation">,</span> <span class="token string">'Trash'</span><span class="token punctuation">,</span> <span class="token string">'Spam'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>text<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItem</span> <span class="token attr-name">button</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItemIcon</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>index <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>InboxIcon</span> <span class="token punctuation">/&gt;</span></span> <span class="token punctuation">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MailIcon</span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ListItemIcon</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ListItemText</span> <span class="token attr-name">primary</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ListItem</span><span class="token punctuation">&gt;</span></span>
+            <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>List</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Drawer</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span>
+          <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">classNames</span><span class="token punctuation">(</span>classes<span class="token punctuation">.</span>content<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">[</span>classes<span class="token punctuation">.</span>contentShift<span class="token punctuation">]</span><span class="token punctuation">:</span> open<span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+        <span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>classes<span class="token punctuation">.</span>drawerHeader<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Typography</span> <span class="token attr-name">paragraph</span><span class="token punctuation">&gt;</span></span>
+            Lorem ipsum dolor sit amet<span class="token punctuation">,</span> consectetur adipiscing elit<span class="token punctuation">,</span> sed <span class="token keyword">do</span> eiusmod tempor
+            incididunt ut labore et dolore magna aliqua<span class="token punctuation">.</span> Rhoncus dolor purus non enim praesent
+            elementum facilisis leo vel<span class="token punctuation">.</span> Risus at ultrices mi tempus imperdiet<span class="token punctuation">.</span> Semper risus <span class="token keyword">in</span>
+            hendrerit gravida rutrum quisque non tellus<span class="token punctuation">.</span> Convallis convallis tellus id interdum
+            velit laoreet id donec ultrices<span class="token punctuation">.</span> Odio morbi quis commodo odio aenean sed adipiscing<span class="token punctuation">.</span>
+            Amet nisl suscipit adipiscing bibendum est ultricies integer quis<span class="token punctuation">.</span> Cursus euismod quis
+            viverra nibh cras<span class="token punctuation">.</span> Metus vulputate eu scelerisque felis imperdiet proin fermentum leo<span class="token punctuation">.</span>
+            Mauris commodo quis imperdiet massa tincidunt<span class="token punctuation">.</span> Cras tincidunt lobortis feugiat vivamus
+            at augue<span class="token punctuation">.</span> At augue eget arcu dictum varius duis at consectetur lorem<span class="token punctuation">.</span> Velit sed
+            ullamcorper morbi tincidunt<span class="token punctuation">.</span> Lorem donec massa sapien faucibus et molestie ac<span class="token punctuation">.</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Typography</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Typography</span> <span class="token attr-name">paragraph</span><span class="token punctuation">&gt;</span></span>
+            Consequat mauris nunc congue nisi vitae suscipit<span class="token punctuation">.</span> Fringilla est ullamcorper eget nulla
+            facilisi etiam dignissim diam<span class="token punctuation">.</span> Pulvinar elementum integer enim neque volutpat ac
+            tincidunt<span class="token punctuation">.</span> Ornare suspendisse sed nisi lacus sed viverra tellus<span class="token punctuation">.</span> Purus sit amet volutpat
+            consequat mauris<span class="token punctuation">.</span> Elementum eu facilisis sed odio morbi<span class="token punctuation">.</span> Euismod lacinia at quis risus
+            sed vulputate odio<span class="token punctuation">.</span> Morbi tincidunt ornare massa eget egestas purus viverra accumsan <span class="token keyword">in</span><span class="token punctuation">.</span>
+            In hendrerit gravida rutrum quisque non tellus orci ac<span class="token punctuation">.</span> Pellentesque nec nam aliquam sem
+            et tortor<span class="token punctuation">.</span> Habitant morbi tristique senectus et<span class="token punctuation">.</span> Adipiscing elit duis tristique
+            sollicitudin nibh sit<span class="token punctuation">.</span> Ornare aenean euismod elementum nisi quis eleifend<span class="token punctuation">.</span> Commodo
+            viverra maecenas accumsan lacus vel facilisis<span class="token punctuation">.</span> Nulla posuere sollicitudin aliquam
+            ultrices sagittis orci a<span class="token punctuation">.</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Typography</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+PersistentDrawerLeft<span class="token punctuation">.</span>propTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  classes<span class="token punctuation">:</span> PropTypes<span class="token punctuation">.</span>object<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
+  theme<span class="token punctuation">:</span> PropTypes<span class="token punctuation">.</span>object<span class="token punctuation">.</span>isRequired<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withStyles</span><span class="token punctuation">(</span>styles<span class="token punctuation">,</span> <span class="token punctuation">{</span> withTheme<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>PersistentDrawerLeft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+</div></div></div></div></div><div class="jpviftx"><iframe class="j1p7trm9" src="./Drawer React component - Material-UI_files/saved_resource(1).html"></iframe></div></div><div class="jbzf938"><div><div class="js98j86"><div style="opacity:0;padding:8px 0px"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/PersistentDrawerRight.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/PersistentDrawerRight.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1ojmaub" tabindex="0" type="button" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/PersistentDrawerRight.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span><span class="jb3bkca"></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/PersistentDrawerRight.js" data-ga-event-action="expand" aria-label="Show the source" title="Show the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/PersistentDrawerRight.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/PersistentDrawerRight.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/PersistentDrawerRight.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div></div><div class="jpviftx"><iframe class="j1p7trm9" src="./Drawer React component - Material-UI_files/saved_resource(2).html"></iframe></div></div><div class="j1c2w4bd markdown-body j1rqdocf">
+    <h2>
+      <a class="anchor-link" id="mini-variant-drawer"></a>Mini variant drawer<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#mini-variant-drawer">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h2>
+  <p>In this variation, the persistent navigation drawer changes its width.
+Its resting state is as a mini-drawer at the same elevation as the content, clipped by the app bar.
+When expanded, it appears as the standard persistent navigation drawer.</p>
+<p>The mini variant is recommended for apps sections that need quick selection access alongside content.</p>
+</div><div class="jbzf938"><div><div class="js98j86"><div style="opacity:0;padding:8px 0px"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/MiniDrawer.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/MiniDrawer.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1ojmaub" tabindex="0" type="button" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/MiniDrawer.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span><span class="jb3bkca"></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/MiniDrawer.js" data-ga-event-action="expand" aria-label="Show the source" title="Show the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/MiniDrawer.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/MiniDrawer.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/MiniDrawer.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div></div><div class="jpviftx"><iframe class="j1p7trm9" src="./Drawer React component - Material-UI_files/saved_resource(3).html"></iframe></div></div><div class="j1c2w4bd markdown-body j1rqdocf">
+    <h2>
+      <a class="anchor-link" id="permanent-drawer"></a>Permanent drawer<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#permanent-drawer">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h2>
+  <p>Permanent navigation drawers are always visible and pinned to the left edge, at the same elevation as the content or background. They cannot be closed.</p>
+<p>Permanent navigation drawers are the <strong>recommended default for desktop</strong>.</p>
+
+    <h3>
+      <a class="anchor-link" id="full-height-navigation"></a>Full-height navigation<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#full-height-navigation">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h3>
+  <p>Apps focused on information consumption that use a left-to-right hierarchy.</p>
+</div><div class="jbzf938"><div><div class="js98j86"><div style="opacity:0;padding:8px 0px"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/PermanentDrawerLeft.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/PermanentDrawerLeft.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/PermanentDrawerLeft.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/PermanentDrawerLeft.js" data-ga-event-action="expand" aria-label="Show the source" title="Show the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/PermanentDrawerLeft.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/PermanentDrawerLeft.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/PermanentDrawerLeft.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div></div><div class="jpviftx"><iframe class="j1p7trm9" src="./Drawer React component - Material-UI_files/saved_resource(4).html"></iframe></div></div><div class="jbzf938"><div><div class="js98j86"><div style="opacity:0;padding:8px 0px"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/PermanentDrawerRight.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/PermanentDrawerRight.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/PermanentDrawerRight.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/PermanentDrawerRight.js" data-ga-event-action="expand" aria-label="Show the source" title="Show the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/PermanentDrawerRight.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/PermanentDrawerRight.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/PermanentDrawerRight.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div></div><div class="jpviftx"><iframe class="j1p7trm9" src="./Drawer React component - Material-UI_files/saved_resource(5).html"></iframe></div></div><div class="j1c2w4bd markdown-body j1rqdocf">
+    <h3>
+      <a class="anchor-link" id="clipped-under-the-app-bar"></a>Clipped under the app bar<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#clipped-under-the-app-bar">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h3>
+  <p>Apps focused on productivity that require balance across the screen.</p>
+</div><div class="jbzf938"><div><div class="js98j86"><div style="opacity:0;padding:8px 0px"><div class="jo041vt j1xh6sm2"><button class="jr0u89w j1ojmaub j1kms6th" tabindex="0" type="button" value="JS" aria-label="Show JavaScript source" data-ga-event-category="pages/demos/drawers/ClippedDrawer.js" data-ga-event-action="source-js"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M7.73,18.04C8.13,18.89 8.92,19.59 10.27,19.59C11.77,19.59 12.8,18.79 12.8,17.04V11.26H11.1V17C11.1,17.86 10.75,18.08 10.2,18.08C9.62,18.08 9.38,17.68 9.11,17.21L7.73,18.04M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86Z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="TS" aria-label="Show TypeScript source" data-ga-event-category="pages/demos/drawers/ClippedDrawer.js" data-ga-event-action="source-ts"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3,3H21V21H3V3M13.71,17.86C14.21,18.84 15.22,19.59 16.8,19.59C18.4,19.59 19.6,18.76 19.6,17.23C19.6,15.82 18.79,15.19 17.35,14.57L16.93,14.39C16.2,14.08 15.89,13.87 15.89,13.37C15.89,12.96 16.2,12.64 16.7,12.64C17.18,12.64 17.5,12.85 17.79,13.37L19.1,12.5C18.55,11.54 17.77,11.17 16.7,11.17C15.19,11.17 14.22,12.13 14.22,13.4C14.22,14.78 15.03,15.43 16.25,15.95L16.67,16.13C17.45,16.47 17.91,16.68 17.91,17.26C17.91,17.74 17.46,18.09 16.76,18.09C15.93,18.09 15.45,17.66 15.09,17.06L13.71,17.86M13,11.25H8V12.75H9.5V20H11.25V12.75H13V11.25Z"></path></svg></span></button><button class="jr0u89w j1p4cocs j1ojmaub j1p4cocs" tabindex="-1" type="button" disabled="" value="HOOK" aria-label="Show Hooks source" data-ga-event-category="pages/demos/drawers/ClippedDrawer.js" data-ga-event-action="source-hooks"><span class="jlyilep"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M18,6C18,7.82 16.76,9.41 15,9.86V17A5,5 0 0,1 10,22A5,5 0 0,1 5,17V12L10,17H7A3,3 0 0,0 10,20A3,3 0 0,0 13,17V9.86C11.23,9.4 10,7.8 10,5.97C10,3.76 11.8,2 14,2C16.22,2 18,3.79 18,6M14,8A2,2 0 0,0 16,6A2,2 0 0,0 14,4A2,2 0 0,0 12,6A2,2 0 0,0 14,8Z"></path></svg></span></button></div></div><div><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/ClippedDrawer.js" data-ga-event-action="expand" aria-label="Show the source" title="Show the source"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path></svg></span><span class="jb3bkca"></span></button><a class="jr0u89w j1g2vga5" tabindex="0" role="button" data-ga-event-category="pages/demos/drawers/ClippedDrawer.js" data-ga-event-action="github" href="https://github.com/mui-org/material-ui/blob/master/docs/src/pages/demos/drawers/ClippedDrawer.js" target="_blank" aria-label="GitHub" title="View the source on GitHub"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"></path></svg></span><span class="jb3bkca"></span></a><button class="jr0u89w j1g2vga5" tabindex="0" type="button" data-ga-event-category="pages/demos/drawers/ClippedDrawer.js" data-ga-event-action="codesandbox" aria-label="CodeSandbox" title="Edit in CodeSandbox"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></span><span class="jb3bkca"></span></button><button class="jr0u89w j1g2vga5" tabindex="0" type="button" aria-haspopup="true" aria-label="See more"><span class="jsbmc5e"><svg class="j2dfb39" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="jb3bkca"></span></button></div></div></div><div class="jpviftx"><iframe class="j1p7trm9" src="./Drawer React component - Material-UI_files/saved_resource(6).html"></iframe></div></div><div class="j1c2w4bd markdown-body j1rqdocf">
+    <h2>
+      <a class="anchor-link" id="api"></a>API<a class="anchor-link-style" href="https://material-ui.com/demos/drawers/#api">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M46.9 13.9c-.5-.6-1.2-.94-2.07-.94h-6.67l1.86-8.98c.17-.85 0-1.7-.52-2.3-.48-.6-1.2-.94-2.07-.94-1.6 0-3.2 1.27-3.54 2.93l-.5 2.42c0 .07-.07.13-.07.2l-1.37 6.62H20.7l1.88-8.96c.16-.85 0-1.7-.53-2.3-.48-.6-1.2-.94-2.07-.94-1.65 0-3.2 1.27-3.56 2.93l-.52 2.58v.08l-1.37 6.64H7.3c-1.67 0-3.22 1.3-3.58 2.96-.16.86 0 1.7.52 2.3.48.6 1.2.93 2.07.93h6.97l-2 9.65H4c-1.67 0-3.22 1.27-3.56 2.94-.2.8 0 1.67.5 2.27.5.6 1.2.93 2.08.93H10l-1.84 9.05c-.2.84 0 1.67.52 2.3.5.6 1.25.92 2.08.92 1.66 0 3.2-1.3 3.55-2.94l1.94-9.33h11.22l-1.87 9.05c-.15.84.03 1.67.53 2.3.5.6 1.2.92 2.07.92 1.65 0 3.22-1.3 3.56-2.94l1.9-9.33h7c1.6 0 3.2-1.28 3.53-2.93.2-.87 0-1.7-.52-2.3-.48-.62-1.2-.96-2.05-.96h-6.7l2.02-9.65h6.93c1.67 0 3.22-1.27 3.56-2.92.2-.85 0-1.7-.5-2.3l-.04.03zM17.53 28.77l1.95-9.65H30.7l-1.97 9.66H17.5h.03z"></path></svg>
+      </a></h2>
+  <ul>
+<li><a href="https://material-ui.com/api/drawer/">&lt;Drawer /&gt;</a></li>
+<li><a href="https://material-ui.com/api/swipeable-drawer/">&lt;SwipeableDrawer /&gt;</a></li>
+</ul>
+</div></main></div></div><script>__NEXT_DATA__ = {"props":{"pageProps":{"reduxServerState":{"theme":{"direction":"ltr","paletteType":"light","paletteColors":{"primary":{"50":"#e3f2fd","100":"#bbdefb","200":"#90caf9","300":"#64b5f6","400":"#42a5f5","500":"#2196f3","600":"#1e88e5","700":"#1976d2","800":"#1565c0","900":"#0d47a1","A100":"#82b1ff","A200":"#448aff","A400":"#2979ff","A700":"#2962ff","main":"#2196f3","light":"#64b5f6","dark":"#1976d2","contrastText":"#fff"},"secondary":{"main":"rgb(225, 0, 80)","light":"rgb(231, 51, 115)","dark":"rgb(157, 0, 56)","contrastText":"#fff"}}},"options":{"codeVariant":"JS","userLanguage":"en"}}}},"page":"/demos/drawers","query":{},"buildId":"Q_51GO4a3mXRgafiA7_E0","nextExport":true};__NEXT_LOADED_PAGES__=[];__NEXT_REGISTER_PAGE=function(r,f){__NEXT_LOADED_PAGES__.push([r, f])}</script><script async="" id="__NEXT_PAGE__/demos/drawers" src="./Drawer React component - Material-UI_files/drawers.js.download"></script><script async="" id="__NEXT_PAGE__/_app" src="./Drawer React component - Material-UI_files/_app.js.download"></script><script async="" id="__NEXT_PAGE__/_error" src="./Drawer React component - Material-UI_files/_error.js.download"></script><script src="./Drawer React component - Material-UI_files/webpack-42652fa8b82c329c0559.js.download" async=""></script><script src="./Drawer React component - Material-UI_files/commons.d3d8175a6402652f2532.js.download" async=""></script><script src="./Drawer React component - Material-UI_files/main-e0157bddb706c19475c4.js.download" async=""></script><script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+window.ga('create','UA-106598593-2','auto');
+              </script></body></html>
